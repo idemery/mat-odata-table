@@ -10,7 +10,8 @@ import { OdataFieldDirective } from './odata-field.directive';
     <mdt-dynamic-table *ngIf="columns && dataSource"
       [columns]="columns"
       [dataSource]="dataSource"
-      [pageSize]="pageSize ? pageSize : 10">
+      [pageSize]="pageSize ? pageSize : 10"
+      [showFilters]="false">
     </mdt-dynamic-table>
   `,
   styles: [

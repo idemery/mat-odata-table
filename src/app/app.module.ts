@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { OdataTableModule, OdataTableComponent, OptionsCellComponent, TextFilterComponent, DateFilterComponent } from 'odata-table';
+import { OdataTableModule } from 'odata-table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -15,9 +15,18 @@ import {
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
+import { OptionsCellComponent } from './cells/options-cell/options-cell.component';
+
+import { TextFilterComponent } from './filters/text-filter/text-filter.component';
+import { DateFilterComponent } from './filters/date-filter/date-filter.component';
+import { CellService, ColumnFilterService } from 'material-dynamic-table';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OptionsCellComponent,
+    TextFilterComponent,
+    DateFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,4 +49,12 @@ import { FormsModule } from '@angular/forms';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private readonly cellService: CellService, private readonly columnFilterService: ColumnFilterService) {
+
+    cellService.registerCell('options', OptionsCellComponent);
+
+    // columnFilterService.registerFilter('string', TextFilterComponent);
+    // columnFilterService.registerFilter('date', DateFilterComponent);
+  }
+}
