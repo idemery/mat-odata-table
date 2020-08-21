@@ -1,0 +1,7 @@
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item  (click)="buy()">Buy product</button>
+  </mat-menu>
+  
+  <button mat-icon-button color="primary" [matMenuTriggerFor]="appMenu">
+     <mat-icon>more_vert</mat-icon>
+   </button>
