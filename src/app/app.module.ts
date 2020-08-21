@@ -54,7 +54,7 @@ export class AppModule {
 
     cellService.registerCell('options', OptionsCellComponent);
 
-    // columnFilterService.registerFilter('string', TextFilterComponent);
-    // columnFilterService.registerFilter('date', DateFilterComponent);
+    columnFilterService.registerFilter('string', TextFilterComponent);
+    columnFilterService.registerFilter('date', DateFilterComponent);
   }
 }
