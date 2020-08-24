@@ -1,7 +1,7 @@
 import { Component, ContentChildren, QueryList, Input, AfterContentInit } from '@angular/core';
 import { ColumnConfig } from 'material-dynamic-table';
 import { HttpClient } from '@angular/common/http';
-import { ODataDataSource, ODataFilter } from 'odata-data-source';
+import { ODataDataSource } from './odata-data-source';
 import { OdataFieldDirective } from './odata-field.directive';
 
 @Component({

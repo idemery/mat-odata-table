@@ -5,12 +5,16 @@ import { OdataFieldDirective } from './odata-field.directive';
 import { OdataFieldOptionDirective } from './odata-field-option.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { DynamicTableModule } from 'material-dynamic-table';
+import {ODataFilter} from './odata-filter';
+import { ODataDataSource } from './odata-data-source';
 
 @NgModule({
   declarations: [
     OdataTableComponent,
     OdataFieldDirective,
-    OdataFieldOptionDirective],
+    OdataFieldOptionDirective,
+    //ODataDataSource
+  ],
   imports: [
     CommonModule,
     HttpClientModule,

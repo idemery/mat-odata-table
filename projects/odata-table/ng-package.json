@@ -5,7 +5,7 @@
     "entryFile": "src/public-api.ts",
     "umdModuleIds": {
       "material-dynamic-table": "material-dynamic-table",
-      "odata-data-source": "odata-data-source"
+      "odata-query": "buildQuery"
     }
   }
 }

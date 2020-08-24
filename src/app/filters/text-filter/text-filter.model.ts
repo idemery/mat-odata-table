@@ -1,4 +1,4 @@
-import { ODataFilter } from 'odata-data-source';
+import { ODataFilter } from 'odata-table';
 
 export class TextFilter implements ODataFilter {
     value: string;
