@@ -81,7 +81,6 @@ export class OdataTableComponent implements AfterContentInit {
       }
     }
 
-    console.log('expand', expand);
     if (expandColumns && expandColumns.length > 0) {
       this.dataSource.expand = expand;
     }
