@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { OdataTableModule } from 'odata-table';
+import { OdataTableModule, OdataTextCellComponent, OdataDateCellComponent } from 'odata-table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -53,6 +53,8 @@ export class AppModule {
   constructor(private readonly cellService: CellService, private readonly columnFilterService: ColumnFilterService) {
 
     cellService.registerCell('options', OptionsCellComponent);
+    cellService.registerCell('text', OdataTextCellComponent);
+    cellService.registerCell('date', OdataDateCellComponent);
 
     columnFilterService.registerFilter('string', TextFilterComponent);
     columnFilterService.registerFilter('date', DateFilterComponent);

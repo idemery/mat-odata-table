@@ -58,9 +58,32 @@ export class OdataTableComponent implements AfterContentInit {
     // }
 
     this.dataSource = new ODataDataSource(this.httpClient, this.url);
-    this.dataSource.selectedFields = this.fields.map(f => f.name);
+    this.dataSource.selectedFields = this.fields.filter(f => f.name.indexOf('.') < 0).map(f => f.name);
     if (this.initialSort) {
       this.dataSource.initialSort = [this.initialSort];
+    }
+
+    const expandColumns = this.fields.filter(f => f.name.indexOf('.') > -1).map(f => f.name);
+    const expand: any = {};
+    for (const expandColumn of expandColumns) {
+      const parts = expandColumn.split('.');
+      for (let i = 0; i < parts.length; i++) {
+
+        const part = parts[i];
+
+        if (i === 0) {
+          if (!expand[part]) {
+            expand[part] = { select: [] };
+          }
+        } else {
+          expand[parts[i - 1]].select.push(part);
+        }
+      }
+    }
+
+    console.log('expand', expand);
+    if (expandColumns && expandColumns.length > 0) {
+      this.dataSource.expand = expand;
     }
   }
 
