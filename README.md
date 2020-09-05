@@ -1,5 +1,5 @@
 # odata-table
-Material OData Table simplifies quering OData V4 APIs using [odata-query](https://github.com/techniq/odata-query), [odata-data-source](https://github.com/relair/odata-data-source), and [material-dynamic-table](https://github.com/relair/material-dynamic-table).
+odata-table simplifies quering OData V4 APIs using [odata-query](https://github.com/techniq/odata-query), [odata-data-source](https://github.com/relair/odata-data-source), and [material-dynamic-table](https://github.com/relair/material-dynamic-table).
 
 _Currently under development._
 
