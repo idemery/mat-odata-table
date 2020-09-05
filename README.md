@@ -7,7 +7,7 @@ _Currently under development._
 
 To install dependencies mentioned above, run the following:
 ```
-npm i odata-query @angular/material@^7.1.0 @angular/cdk@^10.0.2 material-dynamic-table 
+npm i odata-query material-dynamic-table @angular/material @angular/cdk  
 ```
 
 To install odata-table run:

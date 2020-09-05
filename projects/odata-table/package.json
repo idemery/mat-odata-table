@@ -1,6 +1,6 @@
 {
   "name": "odata-table",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.201",
   "description": "Simplifies quering OData V4 APIs using material-dynamic-table.",
   "keywords": ["Angular", "odata", "mat", "material", "table"],
   "license": "MIT",
