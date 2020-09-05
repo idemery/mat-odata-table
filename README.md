@@ -1,27 +1,17 @@
-# MatOdataTable
+# mat-odata-table
+Material OData Table simplifies quering OData V4 APIs using [odata-query](https://github.com/techniq/odata-query), [https://github.com/relair/odata-data-source](odata-data-source), and [material-dynamic-table](https://github.com/relair/material-dynamic-table).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+## Usage
 
-## Development server
+```html
+<mat-odata-table url="https://services.odata.org/V4/OData/OData.svc/Products">
+  <mat-odata-field name="Name" displayName="Name" type="text"></mat-odata-field>
+  <mat-odata-field name="Description" displayName="Description" type="text"></mat-odata-field>
+  <mat-odata-field name="ReleaseDate" displayName="Release Date" type="date">
+    <mat-odata-field-option name="format" value="long"></mat-odata-field-option>    
+  </mat-odata-field>
+  <mat-odata-field name="ProductDetail.Details" displayName="Details" type="text"></mat-odata-field>
+  <mat-odata-field name="Supplier.Name" displayName="Supplier" type="text"></mat-odata-field>
+</mat-odata-table>
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
