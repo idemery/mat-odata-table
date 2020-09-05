@@ -1,6 +1,14 @@
 {
   "name": "odata-table",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1",
+  "description": "Simplifies quering OData V4 APIs using material-dynamic-table.",
+  "keywords": ["Angular", "odata", "mat", "material", "table"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idemery/mat-odata-table"
+  },
+  "homepage": "https://github.com/idemery/mat-odata-table",
   "peerDependencies": {
     "@angular/common": "^10.0.11",
     "@angular/core": "^10.0.11"

@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build_lib": "ng build odata-table",
+    "copy-license": "copy .\\LICENSE .\\dist\\odata-table",
+    "copy-readme": "copy .\\README.md .\\dist\\odata-table",
+    "copy-files": "npm run copy-license && npm run copy-readme",
+    "npm_pack": "cd dist/odata-table && npm pack",
+    "package": "npm run build_lib && npm run copy-files && npm run npm_pack"
   },
   "private": true,
   "dependencies": {
