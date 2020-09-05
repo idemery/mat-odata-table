@@ -43,5 +43,4 @@ export class OdataDateCellComponent implements OnInit {
       this.format = this.column.options.format;
     }
   }
-
 }
