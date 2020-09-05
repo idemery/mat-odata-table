@@ -32,7 +32,9 @@ export class OdataDateCellComponent implements OnInit {
     const expands = this.column.name.split('.');
     let obj = this.row;
     for (const ex of expands) {
-      obj = obj[ex];
+      if (obj[ex]) {
+        obj = obj[ex];
+      }
     }
 
     this.result = obj;
