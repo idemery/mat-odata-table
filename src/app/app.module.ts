@@ -53,7 +53,7 @@ export class AppModule {
   constructor(private readonly cellService: CellService, private readonly columnFilterService: ColumnFilterService) {
 
     cellService.registerCell('options', OptionsCellComponent);
-    cellService.registerCell('text', OdataTextCellComponent);
+    cellService.registerCell('string', OdataTextCellComponent);
     cellService.registerCell('date', OdataDateCellComponent);
 
     columnFilterService.registerFilter('string', TextFilterComponent);

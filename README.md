@@ -7,13 +7,13 @@ _Currently under development._
 
 ```html
 <mat-odata-table url="https://services.odata.org/V4/OData/OData.svc/Products">
-  <mat-odata-field name="Name" displayName="Name" type="text"></mat-odata-field>
-  <mat-odata-field name="Description" displayName="Description" type="text"></mat-odata-field>
+  <mat-odata-field name="Name" displayName="Name" type="string"></mat-odata-field>
+  <mat-odata-field name="Description" displayName="Description" type="string"></mat-odata-field>
   <mat-odata-field name="ReleaseDate" displayName="Release Date" type="date">
     <mat-odata-field-option name="format" value="long"></mat-odata-field-option>    
   </mat-odata-field>
-  <mat-odata-field name="ProductDetail.Details" displayName="Details" type="text"></mat-odata-field>
-  <mat-odata-field name="Supplier.Name" displayName="Supplier" type="text"></mat-odata-field>
+  <mat-odata-field name="ProductDetail.Details" displayName="Details" type="string"></mat-odata-field>
+  <mat-odata-field name="Supplier.Name" displayName="Supplier" type="string"></mat-odata-field>
 </mat-odata-table>
 ```
 
